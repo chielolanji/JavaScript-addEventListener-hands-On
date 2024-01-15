@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hands-On</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <h1 class="text">JavaScript addEventListener() hands-On</h1>
+            <div class="container">
+                <button id="bt1">Button 1</button>
+                <button id="bt2">Button 2</button>
+                <button id="bt3">Button 3</button>
+                <div class="switch-container">
+                    <button id="modeSwitch" class="switch"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let bt1 = document.getElementById('bt1');
+        let bt2 = document.getElementById('bt2');
+        let bt3 = document.getElementById('bt3');
+        let modeSwitch = document.getElementById('modeSwitch');
+
+        bt1.addEventListener('click', bt1Function);
+        bt2.addEventListener('click', bt2Function);
+        bt3.addEventListener('click', bt3Function);
+        modeSwitch.addEventListener('click', toggleMode);
+
+        function bt1Function() {
+            window.alert("Button 1 was clicked!");
+        }
+
+        function bt2Function() {
+            window.alert("Button 2 was clicked!");
+        }
+
+        function bt3Function() {
+            window.alert("Button 3 was clicked!");
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
